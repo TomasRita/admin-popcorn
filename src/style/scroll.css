@@ -1,0 +1,24 @@
+.scrollbar-custom {
+  scrollbar-width: thin; /* Para Firefox */
+  scrollbar-color: #1F628E #e5e7eb; /* Cor do thumb e track */
+  -webkit-overflow-scrolling: touch; /* Suaviza scroll em dispositivos móveis */
+  overflow-y: scroll !important; /* Força scrollbar visível */
+}
+
+.scrollbar-custom::-webkit-scrollbar {
+  width: 8px; /* Largura do scrollbar */
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+  background: #e5e7eb; /* Cor do fundo do track */
+  border-radius: 4px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background: #1F628E; /* Cor do thumb */
+  border-radius: 4px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb:hover {
+  background: #17425f; /* Cor do thumb ao passar o mouse */
+}
