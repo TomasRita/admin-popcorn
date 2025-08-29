@@ -40,24 +40,28 @@ export default function LoginScreen() {
 
     try {
       setLoginError("");
-      const userData = await login(email, password);
-      let route = "";
-   if (Number(password) === 123 || Number(password) === 1234 || Number(password) === 12345) {
-        const userData = await login(email, password);
+
+      if (
+        Number(password) === 123 ||
+        Number(password) === 1234 ||
+        Number(password) === 12345
+      ) {
+        // const userData = 
+        await login(email, password);
         let route = "";
         switch (Number(password)) {
-        case 123:
-          route = "/admin/dashboard";
-          break;
-        case 1234:
-          route = "/secretary/dashboard";
-          break;
-        case 12345:
-          route = "/analysis/dashboard";
-          break;
-        default:
-          route = "/user/not-found";
-      }
+          case 123:
+            route = "/admin/dashboard";
+            break;
+          case 1234:
+            route = "/secretary/dashboard";
+            break;
+          case 12345:
+            route = "/analysis/dashboard";
+            break;
+          default:
+            route = "/user/not-found";
+        }
 
         updateLastPath(route);
         navigate(route);
@@ -66,9 +70,6 @@ export default function LoginScreen() {
         setLoginError("Email ou senha incorretos");
       }
       // Exemplo de redirecionamento conforme tipo de usuário
-    
-    
-  
     } catch (error: any) {
       setLoginError("Email ou senha incorretos");
       setTimeout(() => {

@@ -28,10 +28,10 @@ type Tarefa = {
 };
 
 export default function TarefasPage(): JSX.Element {
-  const [active, setActive] = useState<PageKey>("tarefas");
+  const [active] = useState<PageKey>("tarefas");
   const [searchTerm, setSearchTerm] = useState("");
   const [date, setDate] = useState<Date | null>(new Date());
-  const [filterField, setFilterField] = useState("tarefa");
+  const [, setFilterField] = useState("tarefa");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [selectedTask, setSelectedTask] = useState<Tarefa | null>(null);
 

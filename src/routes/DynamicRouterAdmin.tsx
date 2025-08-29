@@ -5,7 +5,6 @@ import TopBar from "@/components/common/TopBar";
 import Settings from "@/pages/shared/Settings";
 import NotFoundScreen from "@/pages/shared/NotFound";
 import AdminDashboardScreen from "@/pages/platform/users/adminPrincipal/Dashboard";
-import TechnicalSupportScreen from "@/pages/platform/users/adminPrincipal/TechnicalSupport";
 import FranchisesPage from "@/pages/platform/users/adminPrincipal/FranchisesPage";
 import StartupsPage from "@/pages/platform/users/adminPrincipal/StartupsPage";
 import PerfilEmpresa from "@/pages/platform/users/secretary/PerfilStartup";
@@ -45,7 +44,7 @@ const DynamicRouterAdmin: React.FC = () => {
             <Route path="startups" element={<StartupsPage />} />
             <Route path="startup/profile/:name" element={<PerfilEmpresa />} />
             <Route path="franchise" element={<FranchisesPage />} />
-            <Route path="contact" element={<TechnicalSupportScreen />} />
+  
             <Route path="settings" element={<Settings />} />
           </Routes>
         </div>

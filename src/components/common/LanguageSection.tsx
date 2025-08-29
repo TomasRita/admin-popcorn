@@ -6,7 +6,7 @@ import { UserSectionProps } from "@/types/services";
 export default function LanguageSection({ userData }: UserSectionProps) {
   const [region, setRegion] = useState("BR");
   const [language, setLanguage] = useState("pt");
-
+  console.log(userData)
   const regions = [
     { code: "BR", name: "Brasil" },
     { code: "AO", name: "Angola" },

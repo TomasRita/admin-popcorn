@@ -7,7 +7,7 @@ import {
   Camera,
   AlertTriangle,
   CheckCircle,
-  Lock,
+
 } from "lucide-react";
 import ComponetButton from "./button";
 import { UserSectionProps } from "@/types/services";
