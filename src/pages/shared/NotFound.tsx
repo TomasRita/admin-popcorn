@@ -1,15 +1,23 @@
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
-import { motion } from "framer-motion"; // For animations
+import { motion, Variants } from "framer-motion"; 
 
 export default function NotFoundScreen() {
   const navigate = useNavigate();
 
   // Animation variants for text and button
-  const textVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
-  };
+const textVariants: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut", // <- permitido, mas precisa tipagem correta
+    },
+  },
+};
+
 
   const buttonVariants = {
     hidden: { opacity: 0, scale: 0.8 },

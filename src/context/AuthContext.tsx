@@ -7,7 +7,7 @@ import {
   ReactNode,
   useEffect,
 } from "react";
-import { useAuthenticateUser, useRegisterUser } from "../hooks/DynamicApiHooks";
+import { useRegisterUser } from "../hooks/DynamicApiHooks";
 
 interface User {
   id_user?: number;
@@ -75,7 +75,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     return storedUser ? JSON.parse(storedUser) : null;
   });
 
-  const { mutateAsync: authenticate } = useAuthenticateUser();
+  // const { mutateAsync: authenticate } = useAuthenticateUser();
   const { mutateAsync: registerUser } = useRegisterUser();
 
   useEffect(() => {
@@ -112,7 +112,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     return { path };
   };
 
-  const login = async (email: string, password: string): Promise<User> => {
+  const login = async (_email: string, _password: string): Promise<User> => {
     try {
       // const data: AuthResponse = await authenticate({ email, password });
 
